@@ -283,9 +283,9 @@ Try it out with `fzf`.
 
 Note to safely uninstall, use the provided uninstall script:
 
-    ```sh
-    $ git clone git@github.com:junegunn/fzf.git
-    $ cd fzf
-    $ ./uninstall
-    $ brew uninstall fzf
-    ```
+```sh
+$ git clone git@github.com:junegunn/fzf.git
+$ cd fzf
+$ ./uninstall
+$ brew uninstall fzf
+```
