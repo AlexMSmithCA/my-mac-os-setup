@@ -412,3 +412,14 @@ Try it out with `prettyping <URL>`.
     ```
 
 Try it out with `ncdu` or `du` (if aliased).
+
+## tldr
+
+[tldr](https://github.com/tldr-pages/tldr) is a collection of simplified and community-driven man pages.
+
+1.  Install tldr:
+    ```sh
+    $ brew install tldr
+    ```
+
+Try it out with `tldr <COMMAND>`.
