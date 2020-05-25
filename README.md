@@ -396,3 +396,19 @@ A few useful key bindings:
     ```
 
 Try it out with `prettyping <URL>`.
+
+## ncdu
+
+[ncdu](https://dev.yorhel.nl/ncdu) is a disk usage analyzer alternative to `du`.
+
+1.  Install ncdu:
+    ```sh
+    $ brew install ncdu
+    ```
+2.  (Optional) Setup an alias for ncdu:
+    ```
+    // ~/.zshrc
+    alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
+    ```
+
+Try it out with `ncdu` or `du` (if aliased).
