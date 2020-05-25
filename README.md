@@ -96,6 +96,46 @@ iTerm2 is a feature-rich replacement for Terminal.
     * Profiles -> Colors ->  Import and use the "Afterglow" preset.
     * Profiles -> Terminal -> Enable "Unlimited scrollback"
 
+## Visual Studio Code
+
+Visual Studio Code is a lightweight source-code and text editor.
+
+### Installation
+
+1.  Go to https://code.visualstudio.com/ and download VSCode on macOS
+2.  Install the app, following the steps in the installer.
+
+### Configuration
+
+1.  Install support for 'code' from the command line via `CMD+P > Install 'code'...`:
+
+<p align="center">
+    <img src="assets/vscode-install-code.png" alt="drawing" width="350"/>
+</p>
+
+2.  Set VSCode as your default editor in `~/.zshrc`:
+    ```sh
+    # Setup for default editor
+    export EDITOR='code'
+    export VISUAL='code'
+    ```
+3.  (Optional) Install `Atom One Dark Theme` extension and enable the color theme:
+    ```CTRL+SHIFT+X -> "Atom One Dark Theme" -> "Install"```
+4.  (Optional) Install `Babel JavaScript` extension to support better syntax highlighting for modern JavaScript (React/JSX, Flow, GraphQL, etc.)
+5.  (Optional) Add some reasonable exclusions and editor configuration in `settings.json`:
+    * Open Settings with `CMD+P` -> `> Open Settings (JSON)`
+    ```json
+    "editor.formatOnType": true,
+    "editor.minimap.enabled": false,
+
+    "files.exclude": {
+        "**/.git": true
+    },
+    "search.exclude": {
+        "**/.git": true
+    },
+    ```
+
 # Shell
 
 ## zsh
