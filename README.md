@@ -289,3 +289,54 @@ $ cd fzf
 $ ./uninstall
 $ brew uninstall fzf
 ```
+
+## ranger
+
+[ranger](https://github.com/ranger/ranger) is a console file manager.
+
+1.  Install ranger:
+    ```sh
+    $ brew install ranger
+    ```
+2.  (Optional) Alias `ranger` as `ra`.
+    ```
+    // ~/.zshrc
+    alias ra='ranger'
+    ```
+3.  (Optional) Add custom commands:
+    * Copy default configuration to `~/.config/ranger`:
+    ```sh
+    $ ranger --copy-config=all
+    ```
+    * Add command to open Visual Studio Code with `:code <FILE>`:
+    ```py
+    # ~/.config/ranger/commands.py
+    class code(Command):
+    """
+    :code
+    Opens current directory in VSCode
+    """
+    def execute(self):
+        dirname = self.fm.thisdir.path
+        remainder = self.rest(1)
+        codecmd = ["code", dirname + os.sep + remainder]
+        self.fm.execute_command(codecmd)
+    ```
+    * Add command to open Finder in the current directory with `:finder`:
+    ```py
+    # ~/.config/ranger/commands.py
+    class finder(Command):
+        """
+        :finder
+        Present selected files in finder
+        """
+        def execute(self):
+            self.fm.run('open .', flags='f')
+    ```
+
+Try it out with `ranger`.
+
+A few useful key bindings:
+* `i`: Inspect the current file in a bigger window.
+* `SHIFT+e`: Edit the current file in $VISUAL otherwise $EDITOR otherwise "vim".
+* `SHIFT+s`: Change our shell's directory to match that of ranger and exit.
