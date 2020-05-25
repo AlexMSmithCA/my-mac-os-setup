@@ -380,3 +380,19 @@ A few useful key bindings:
 * `i`: Inspect the current file in a bigger window.
 * `SHIFT+e`: Edit the current file in $VISUAL otherwise $EDITOR otherwise "vim".
 * `SHIFT+s`: Change our shell's directory to match that of ranger and exit.
+
+## prettyping
+
+[prettyping](https://github.com/denilsonsa/prettyping) is a visual wrapper around the standard ping tool.
+
+1.  Install prettyping:
+    ```sh
+    $ brew install prettyping
+    ```
+2.  (Optional) Alias `prettyping` as `ping`.
+    ```
+    // ~/.zshrc
+    alias ping='prettyping --nolegend'
+    ```
+
+Try it out with `prettyping <URL>`.
