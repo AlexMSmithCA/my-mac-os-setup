@@ -290,12 +290,13 @@ Follow the Mac steps outlined in GitHub's [Generating a new SSH key and adding i
 3.  (Optional) Add some helpful alises:
     ```sh
     // ~/.zshrc
+    eval "$(fasd --init zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)"
     alias a='fasd -a' # find all (files + directories)
     alias f='fasd -f' # find files
     # function to execute built-in cd
     fasd_cd() {
         if [ $# -le 1 ]; then
-            fasd "$@"
+        cd $(fasd -d -l "$@" | fzf)
         else
             local _fasd_ret="$(fasd -e 'printf %s' "$@")"
             [ -z "$_fasd_ret" ] && return
@@ -305,7 +306,7 @@ Follow the Mac steps outlined in GitHub's [Generating a new SSH key and adding i
     alias j='fasd_cd -d' # cd to directory
     ```
 
-Try out some of these alises with with `j <KEYWORD>`, `a <KEYWORD>`, and `f <KEYWORD>`.
+Try out some of these alises with with `j <KEYWORD>`, `a <KEYWORD>`, and `f <KEYWORD>`.  Providing a keyword is optional for each of these.  Check out `j` for how we can chain our commands with `fzf`.
 
 ## Tig
 
