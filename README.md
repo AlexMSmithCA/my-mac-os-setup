@@ -450,3 +450,18 @@ Try it out with `ncdu` or `du` (if aliased).
     ```
 
 Try it out with `tldr <COMMAND>`.
+
+## fd
+
+[fd](https://github.com/sharkdp/fd#benchmark) is a simple, fast and user-friendly alternative to find.
+
+1.  Install fd:
+    ```sh
+    $ brew install fd
+    ```
+
+Try it out with `fd <PATTERN>`.
+
+A few useful options:
+* `fd -e <EXTENSION> // e.g. fd -e js`: filter search results by their file extensions.
+* `fd -f <FILE_TYPE> // eg. fd -t f`: filter search results by type (files, directories, symlinks, executables, etc.)
