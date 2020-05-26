@@ -459,6 +459,19 @@ Try it out with `tldr <COMMAND>`.
     ```sh
     $ brew install fd
     ```
+2.  (Optional) Setup an alias to chain together fd and fzf to improve the default `cd` functionality:
+    ```
+    // ~/.zshrc
+    _cd() {
+        if [ $# -lt 1 ]; then
+            local dir="$(fd -t d | fzf)"
+            [ ! -z "$dir" ] && cd $dir
+        else
+            cd $@
+        fi
+    }
+    alias cd='_cd'
+    ```
 
 Try it out with `fd <PATTERN>`.
 
