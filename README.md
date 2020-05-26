@@ -128,12 +128,16 @@ Visual Studio Code is a lightweight source-code and text editor.
 3.  (Optional) Install `Atom One Dark Theme` extension and enable the color theme:
     ```CTRL+SHIFT+X -> "Atom One Dark Theme" -> "Install"```
 4.  (Optional) Install `Babel JavaScript` extension to support better syntax highlighting for modern JavaScript (React/JSX, Flow, GraphQL, etc.)
-5.  (Optional) Add some reasonable exclusions and editor configuration in `settings.json`:
+5.  (Optional) Install `ESLint` extension for IDE integration.
+6.  (Optional) Add some reasonable exclusions and editor configuration in `settings.json`:
     * Open Settings with `CMD+P` -> `> Open Settings (JSON)`
     ```json
     "editor.formatOnType": true,
     "editor.minimap.enabled": false,
-
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    
     "files.exclude": {
         "**/.git": true
     },
