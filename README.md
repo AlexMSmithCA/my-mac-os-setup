@@ -296,7 +296,8 @@ Follow the Mac steps outlined in GitHub's [Generating a new SSH key and adding i
     # function to execute built-in cd
     fasd_cd() {
         if [ $# -le 1 ]; then
-        cd $(fasd -d -l "$@" | fzf)
+            local dir="$(fasd -d -l "$@" | fzf)"
+            [ ! -z "$dir" ] && cd $dir
         else
             local _fasd_ret="$(fasd -e 'printf %s' "$@")"
             [ -z "$_fasd_ret" ] && return
