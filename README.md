@@ -56,7 +56,13 @@ Documents the steps necessary to install my macOS setup.  Most of the focus will
 1.  Increase scaled resolution: 
 
 <p align="center">
-    <img src="assets/preferences-display.png" alt="drawing" width="550"/>
+    <img src="assets/preferences-display-resolution.png" alt="drawing" width="550"/>
+</p>
+
+2.  Enable Night Shift:
+
+<p align="center">
+    <img src="assets/preferences-display-night-shift.png" alt="drawing" width="550"/>
 </p>
 
 # Applications
