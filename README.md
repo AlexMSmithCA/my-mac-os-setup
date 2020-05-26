@@ -271,16 +271,41 @@ Add some reasonable aliases:
 
 Follow the Mac steps outlined in GitHub's [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) guide.
 
-## autojump
+## Fasd
 
-[autojump](https://github.com/wting/autojump) is a helpful shell utility to more quickly navigate your filesystem.
+[Fasd](https://github.com/clvv/fasd) is a command-line productivity booster that offers quick access to files and directories.
 
-1.  Install autojump:
+1.  Install Fasd:
     ```sh
-    $ brew install autojump
+    $ brew install fasd
+    ```
+2.  Add initialization code to `~/.zshrc`:
+    ```sh
+    // ~/.zshrc
+    eval "$(fasd --init zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)"
     ```
 
-Try it out with `j <KEYWORD>`.
+    Note that `fasd --init auto` also includes `posix-alias` which has been removed here.  This would add all of the built-in alises.  As I tend not to use them all, I've cherry picked only those I want below.
+
+3.  (Optional) Add some helpful alises:
+    ```sh
+    // ~/.zshrc
+    alias a='fasd -a' # find all (files + directories)
+    alias f='fasd -f' # find files
+    # function to execute built-in cd
+    fasd_cd() {
+        if [ $# -le 1 ]; then
+            fasd "$@"
+        else
+            local _fasd_ret="$(fasd -e 'printf %s' "$@")"
+            [ -z "$_fasd_ret" ] && return
+            [ -d "$_fasd_ret" ] && cd "$_fasd_ret" || printf %s\n "$_fasd_ret"
+        fi
+    }
+    alias j='fasd_cd -d' # cd to directory
+    ```
+
+Try out some of these alises with with `j <KEYWORD>`, `a <KEYWORD>`, and `f <KEYWORD>`.
 
 ## Tig
 
