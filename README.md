@@ -149,6 +149,15 @@ Visual Studio Code is a lightweight source-code and text editor.
 
 # Shell
 
+## Homebrew
+
+[Homebrew](https://brew.sh/) is a package manager for macOS.
+
+1.  Install Homebrew:
+    ```sh
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    ```
+
 ## zsh
 
 [zsh](https://github.com/zsh-users/zsh) is a feature-rich shell with lots of features above and beyond the default bash shell.
