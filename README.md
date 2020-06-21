@@ -22,7 +22,8 @@ Documents the steps necessary to install my macOS setup.  Most of the focus will
 </p>
 
 2.  Set "Minimize windows using" to "Scale effect".
-3.  Enable "Automatically hide and show the Dock".
+3.  Enable "Minimize windows into application icon".
+4.  Enable "Automatically hide and show the Dock".
 
 ## Accessibility
 
