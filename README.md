@@ -161,7 +161,7 @@ Visual Studio Code is a lightweight source-code and text editor.
 
 1.  Install Homebrew:
     ```sh
-    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
 
 ## zsh
