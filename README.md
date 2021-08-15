@@ -47,6 +47,12 @@ Documents the steps necessary to install my macOS setup.  Most of the focus will
     <img src="assets/preferences-keyboard-shortcuts.png" alt="drawing" width="450"/>
 </p>
 
+3.  Set "Show Spotlight search" to `OPTION+Space`:
+
+<p align="center">
+    <img src="assets/preferences-keyboard-shortcuts-spotlight.png" alt="drawing" width="450"/>
+</p>
+
 ## Trackpad
 
 1.  Enable "Tap to click" in "Point & Click".
