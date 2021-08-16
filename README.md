@@ -325,7 +325,7 @@ Follow the Mac steps outlined in GitHub's [Generating a new SSH key and adding i
 
     Note that `fasd --init auto` also includes `posix-alias` which has been removed here.  This would add all of the built-in alises.  As I tend not to use them all, I've cherry picked only those I want below.
 
-3.  (Optional) Add some helpful alises:
+3.  (Optional) Add some helpful alises (some require `fzf`):
     ```sh
     // ~/.zshrc
     eval "$(fasd --init zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)"
