@@ -85,17 +85,23 @@ Alfred is an productivity and efficiency tool that mirrors and expands the capab
     * General -> Set "Alfred Hotkey" to `CMD+Space`.
     * Appearance -> Set to "Alfred Dark".
 
-## Spectacle
+## Rectangle
 
-Spectacle is a windowing tool that supports moving and resizing windows via keyboard shortcuts.
+Rectangle is a windowing tool (based on [Spectacle](https://www.spectacleapp.com/)) that supports moving and resizing windows via keyboard shortcuts.
 
-1.  Go to https://www.spectacleapp.com/ and download Spectacle.
-2.  Install the app, following the steps in the installer.
-3.  Open Spectacle Preferences and set the following:
-    * Set "Fullscreen" to `OPTION+CMD+F`.
-    * Set "Left Half" to `CTRL+CMD+<-`.
-    * Set "Right Half" to `CTRL+CMD+->`.
-    * Enable "Launch Spectacle at login".
+1.  Install with Homebrew:
+    ```sh
+    $ brew install --cask rectangle
+    ```
+2.  Open the app (via Spotlight) and follow the setup steps:
+
+<p align="center">
+    <img src="assets/rectangle-setup-authorization.png" alt="drawing" width="350"/>
+</p>
+
+4.  Open Preferences and set the following:
+    * Enable "Hide menu bar icon".
+    * Enable "Check for updates automatically".
 
 ## iTerm2
 
