@@ -211,10 +211,16 @@ Install [Prezto](https://github.com/sorin-ionescu/prezto), a configuration frame
         ```
     * And copy the preset configuration from Prezto:
         ```sh
-        $ setopt EXTENDED_GLOB
+        // ~/.zshrc
+        setopt EXTENDED_GLOB
         for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
             ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
         done
+        ```
+        If the above causes an error (`file already exists`), instead replace it with:
+        ```sh
+        // ~/.zshrc
+        source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
         ```
 3.  Add some modules to your `.zpreztorc` config file:
     ```sh
