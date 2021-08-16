@@ -87,7 +87,7 @@ Alfred is an productivity and efficiency tool that mirrors and expands the capab
 
 ## Rectangle
 
-Rectangle is a windowing tool (based on [Spectacle](https://www.spectacleapp.com/)) that supports moving and resizing windows via keyboard shortcuts.
+[Rectangle](https://github.com/rxhanson/Rectangle) is a windowing tool (based on [Spectacle](https://www.spectacleapp.com/)) that supports moving and resizing windows via keyboard shortcuts.
 
 1.  Install with Homebrew:
     ```sh
