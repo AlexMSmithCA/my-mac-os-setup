@@ -516,3 +516,12 @@ Try it out with `fd <PATTERN>`.
 A few useful options:
 * `fd -e <EXTENSION> // e.g. fd -e js`: filter search results by their file extensions.
 * `fd -f <FILE_TYPE> // eg. fd -t f`: filter search results by type (files, directories, symlinks, executables, etc.)
+
+## jq
+
+[jq](https://stedolan.github.io/jq/) is a command-line JSON processor, similar to `sed` but for JSON data.
+
+1.  Install jq:
+    ```sh
+    $ brew install jq
+    ```
